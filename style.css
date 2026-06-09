@@ -1,0 +1,165 @@
+/* Reset básico para que se vea igual en todos los navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fondo general de la página */
+body {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* --- Barra de Navegación --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #23252b; /* Gris muy oscuro */
+    padding: 15px 40px;
+    border-bottom: 2px solid #000;
+}
+
+.logo {
+    color: #f47521; /* Naranja característico */
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+nav ul li a {
+    color: #dfdfdf;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #ffffff;
+}
+
+.btn-premium {
+    background-color: #f47521;
+    color: #000000 !important;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.btn-premium:hover {
+    background-color: #ff8c42; /* Naranja más claro al pasar el mouse */
+}
+
+/* --- Sección Destacada (Hero) --- */
+.hero {
+    height: 450px;
+    /* Usamos un gradiente oscuro hacia transparente para que el texto sea legible sobre la imagen */
+    background: linear-gradient(to right, #000000 30%, transparent), 
+                url('https://via.placeholder.com/1600x600/1a1a1a/444444?text=Fondo+de+Anime+Destacado') center/cover;
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.hero-content {
+    max-width: 550px;
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+    line-height: 1.1;
+}
+
+.hero-content p {
+    font-size: 16px;
+    margin-bottom: 25px;
+    color: #cccccc;
+    line-height: 1.5;
+}
+
+.btn-play {
+    background-color: #f47521;
+    color: #000;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: transform 0.1s;
+}
+
+.btn-play:active {
+    transform: scale(0.95); /* Efecto de "click" */
+}
+
+/* --- Catálogo (Grid) --- */
+.catalog {
+    padding: 40px 50px;
+}
+
+.catalog h2 {
+    margin-bottom: 25px;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.grid-cards {
+    display: grid;
+    /* Esto hace que la cuadrícula sea responsiva automáticamente */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: transparent;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* La tarjeta flota un poco al pasar el mouse */
+}
+
+.thumbnail {
+    height: 300px;
+    border-radius: 2px;
+    margin-bottom: 10px;
+    background-color: #23252b;
+    /* Imagen de marcador de posición para las portadas */
+    background-image: url('https://via.placeholder.com/200x300/333333/555555?text=Portada');
+    background-size: cover;
+    background-position: center;
+}
+
+.card h3 {
+    font-size: 15px;
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+/* El texto de la tarjeta cambia a naranja al pasar el mouse por encima */
+.card:hover h3 {
+    color: #f47521;
+}
+
+.card p {
+    font-size: 13px;
+    color: #a0a0a0;
+}
